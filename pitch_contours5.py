@@ -69,7 +69,7 @@ def find_max_len(directory):
 def load_generic_audio(directory, sample_rate):
     '''yields audio waveforms from the directory.'''
     files = find_files(directory)
-    files = files[0:50]
+    #files = files[0:50]
     for filename in files:
         audio, sr = librosa.load(filename, sr=sample_rate, mono=False)
         audio = audio[1]
