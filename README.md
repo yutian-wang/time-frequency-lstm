@@ -23,3 +23,6 @@ dense_2 (Dense)              (None, 16)                4112
 =================================================================
 </code></pre>
 after 50 epoch training, the model gets 93.6% accuracy
+
+In the result demo, the green line is ground truth and the red dot is estimated results.
+<img src="https://github.com/yutian-wang/time-frequency-lstm/blob/master/res4.png" />
