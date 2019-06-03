@@ -5,6 +5,8 @@ this work firstly process the audio spectrum into overlaped sequence with freque
 On the other hand, the label sequence is discretized into the frequency bins, which is sample_rate/frame_size. In mir-1k corpus，the frequency bin interval is 25Hz. Then these discretized values are encoded into non-sparse one-hot codes. The number of the units of the output is the width of the one-hot codes.
 the architecture of the networks is shown as below
 
+<pre><code>
+
 Layer (type)                 Output Shape              Param #   
 =================================================================
 input_2 (InputLayer)         (None, 8, 17, 64)         0         
@@ -19,5 +21,5 @@ lstm_8 (LSTM)                (None, 256)               525312
 _________________________________________________________________
 dense_2 (Dense)              (None, 16)                4112      
 =================================================================
-
+</code></pre>
 after 50 epoch training, the model gets 93.6% accuracy
