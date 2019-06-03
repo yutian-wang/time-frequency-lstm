@@ -235,13 +235,13 @@ model.compile(loss='categorical_crossentropy',
               optimizer=opt,
               metrics=['accuracy'])
 
-model.fit(X_train, Y_train_onehot, epochs=5, batch_size=64,validation_data=(X_test, Y_test_onehot))
+model.fit(X_train, Y_train_onehot, epochs=50, batch_size=64,validation_data=(X_test, Y_test_onehot))
 
 model.save('pv_mlstm.h5')
-test=X_test[:]
+test=X_test[0:600]
 result = model.predict(test)
 D=inverse_X_data(test)
-test_Y=Y_test_onehot[:]
+test_Y=Y_test_onehot[0:600]
 Y_labels=inverse_Y_data(test_Y,enc)
 Y_preds=inverse_Y_data(result,enc)
 
